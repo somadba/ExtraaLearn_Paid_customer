@@ -27,8 +27,8 @@ current_occupation_Unemployed=st.selectbox("Current Occupation - Unemployed?", [
 first_interaction_Website=st.selectbox("first_interaction - Website?", ["true", "false"])
 profile_completed_Low=st.selectbox("Profile Completed - Low?", ["true", "false"])
 profile_completed_Medium=st.selectbox("Profile Completed - Medium?", ["true", "false"])
-last_activity_Phone Activity=st.selectbox("last_activity - Phone Activity?", ["true", "false"])
-last_activity_Website Activity=st.selectbox("last_activity - Website Activity?", ["true", "false"])
+last_activity_Phone=st.selectbox("last_activity - Phone Activity?", ["true", "false"])
+last_activity_Website=st.selectbox("last_activity - Website Activity?", ["true", "false"])
 print_media_type1_Yes=st.selectbox("print_media_type1 - Yes?", ["true", "false"])
 print_media_type2_Yes=st.selectbox("print_media_type2 - Yes?", ["true", "false"])
 digital_media_Yes=st.selectbox("digital_media - Yes?", ["true", "false"])
@@ -47,8 +47,8 @@ input_data = pd.DataFrame([{
 'first_interaction_Website': first_interaction_Website,
 'profile_completed_Low': profile_completed_Low,
 'profile_completed_Medium': profile_completed_Medium,
-'last_activity_Phone Activity': last_activity_Phone Activity,
-'last_activity_Website Activity':last_activity_Website Activity,
+'last_activity_Phone': last_activity_Phone,
+'last_activity_Website':last_activity_Website,
 'print_media_type1_Yes': print_media_type1_Yes,
 'print_media_type2_Yes': print_media_type2_Yes,
 'digital_media_Yes': digital_media_Yes,
@@ -60,3 +60,4 @@ input_data = pd.DataFrame([{
 if st.button("Predict"):
     prediction = model.predict(input_data)
     st.write(f"Converted to Paid  ${(prediction)[0]:.2f}.")
+
